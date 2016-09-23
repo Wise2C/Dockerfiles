@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER WiseCity <admin@wise2c.com>
 
 RUN apt-get update
-RUN apt-get install -y python-pip python-dev gcc phantomjs xvfb libssl-dev firefox
+RUN apt-get install -y python-pip python-dev python-paramiko gcc phantomjs xvfb libssl-dev firefox
 
 ADD xvfb_init /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
