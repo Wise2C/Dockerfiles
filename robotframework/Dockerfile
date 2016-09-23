@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER WiseCity <admin@wise2c.com>
 
 RUN apt-get update
-RUN apt-get install -y firefox python-pip python-dev gcc phantomjs xvfb x11vnc x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps
+RUN apt-get install -y python-pip python-dev gcc phantomjs xvfb firefox
 
 ADD xvfb_init /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
