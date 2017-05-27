@@ -1,0 +1,14 @@
+FROM ubuntu:16.04
+
+RUN  apt-get update -y && apt-get install -y python-software-properties
+RUN  add-apt-repository -y ppa:webupd8team/java
+RUN  apt-get update -y
+RUN  apt-get install -y oracle-java8-installer oracle-java8-set-default
+
+#ADD http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.gz .
+#ENV PATH $PATH:/jdk1.5.0_22/bin:/apache-maven-2.2.1/bin/
+#ENV JAVA_HOME /jdk1.5.0_22
+#ENV M2_HOME /apache-maven-2.2.1/
+#ENV M2_REPO /root/.m2
+#ENTRYPOINT ["mvn"]
+#WORKDIR /root/project
